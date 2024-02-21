@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('stock');
             $table->enum('estado',['activo','roto','desaparecido']);
             $table->unsignedBigInteger('localizacion_id')->nullable();
-            $table->foreign('localizacion_id')->references('id')->on('localizaciones')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('localizacion_id')->references('id')->on('localizacions')->onUpdate('cascade')->onDelete('cascade');//notaa(localizaciones)
             $table->timestamps();
         });
     }
